@@ -124,6 +124,7 @@ function initMap() {
       </div>
       <div class="modal-body">
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+          <%= f.input :picture %>
           <%= f.input :caption %>
       </div>
       <div class="modal-footer">
@@ -138,7 +139,8 @@ function initMap() {
 <div class="col-xs-12 col-sm-6">
     <blockquote>
 <% @place.photos.each do |photo| %>
-      <b><%= photo.caption %></b> -
+      <b><%= image_tag photo.picture %></b><br />
+      <b><%= photo.caption %></b>
       <small><%= photo.user.email %></small>
     </blockquote>
   </div>

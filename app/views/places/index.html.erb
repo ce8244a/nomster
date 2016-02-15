@@ -21,11 +21,12 @@
   </div>
   <%end %>
 
-<% if place.photos.present? %>
+<div class="clear"></div>
+<% if place.photos.last.present? && place.photos.last.picture.present? %>
 <div class="col-xs-12">
     <blockquote>
-      <b><%= place.photo.last.caption %></b> -
-      <small><%= photo.user.email %></small>
+      <b><%= place.photos.last.caption %></b> -
+      <small><%= place.photos.last.user.email %></small>
     </blockquote>
   </div>
   <%end %>
