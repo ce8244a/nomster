@@ -103,10 +103,15 @@ function initMap() {
   <%= f.submit "Add a photo", class: 'btn btn-primary' %>
 <% end %>
 
+<div class="col-xs-10 col-xs-offset-1">
+<h1 class="pull-left">Photos</h1>
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPhotoModal">
   Add a Photo
 </button>
+</div>
+
+<div class="clear"></div>
 
 <!-- Photo Modal -->
 <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -129,10 +134,8 @@ function initMap() {
   </div>
 </div>
 
-<h1>Photos</h1>
-
 <% @place.photos.each do |photo| %>
-  <div>
+   <div class="col-xs-12 col-sm-6">
     <blockquote>
       <b><%= photo.caption %></b> -
       <small><%= photo.user.email %></small>
