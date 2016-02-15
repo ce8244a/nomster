@@ -1,7 +1,7 @@
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-10 col-xs-offset-1">
 	  <h1><%= link_to place.name, place_path(place) %></h1><br />
-	<h1><%= place.name %></h1>
+	
 	<i><%= place.address %></i><br /><br />
 	<p><%= place.description %></p><br />
 
@@ -26,7 +26,7 @@
 <div class="col-xs-12">
     <blockquote>
     <% place.photos.each do |photo| %>
-    <div class="col-xs-12 col-sm-6">
+    
       <b><%= image_tag photo.picture, :class => 'img-responsive' %></b><br />
       <b><%= place.photos.last.caption %></b> -
       <small><%= place.photos.last.user.email %></small>
