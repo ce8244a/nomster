@@ -134,11 +134,13 @@ function initMap() {
   </div>
 </div>
 
-<% @place.photos.each do |photo| %>
-   <div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-6">
     <blockquote>
+<% @place.photos.each do |photo| %>
       <b><%= photo.caption %></b> -
       <small><%= photo.user.email %></small>
     </blockquote>
   </div>
+ </div> 
 <% end %>
+
